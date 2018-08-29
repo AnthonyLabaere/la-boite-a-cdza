@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EpisodeService } from '../../app/_services/episode.service';
 import { EpisodeSumUp } from '../../app/entities';
+import { EpisodePage } from '../episode/episode';
 
 @Component({
   selector: 'page-home',
@@ -22,8 +23,8 @@ export class HomePage implements OnInit {
       });
   }
 
-  public onEpisodeClick(/*episode: Episode*/) {
-    // this.navCtrl.push(EpisodePage, {episode: episode});
+  public onEpisodeClick(episodeId: number) {
+    this.navCtrl.push(EpisodePage, {episodeId: episodeId});
   }
 
 }

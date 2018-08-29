@@ -12,6 +12,8 @@ import { HomePage } from '../pages/home/home';
 import { EpisodeService } from './_services/episode.service';
 import { ProtagonistService } from './_services/protagonist.service';
 import { SoundService } from './_services/sound.service';
+import { EpisodePage } from '../pages/episode/episode';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -20,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    EpisodePage
   ],
   imports: [
     BrowserModule,
@@ -37,9 +40,11 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    EpisodePage
   ],
   providers: [
+    NativeAudio,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

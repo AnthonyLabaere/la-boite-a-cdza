@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="card-background-page">
-  <ion-card *ngFor="let episode of episodes" (click)="onEpisodeClick(episode)">
+  <ion-card *ngFor="let episode of episodes" (click)="onEpisodeClick(episode.id)">
     <img src="assets/imgs/episodes/{{episode.logo.fileName}}" alt="{{episode.logo.description}}" />
     <!-- <div class="card-title">{{episode.title}}</div> -->
     <!-- <div class="card-subtitle" [translate]="'home.episode.subtitle'" [translateParams]="{soundsNumber: episode.sounds.length}"></div> -->

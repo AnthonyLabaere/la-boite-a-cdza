@@ -67,9 +67,10 @@ export class ProtagonistSumUp {
 export class Sound {
     id: number;   
     title: string;
+    fileName: string;
     logo: Image;
 
-    constructor(id: number, title: string, logo?: Image) {
+    constructor(id: number, title: string, fileName:string, logo?: Image) {
         this.id = id;
         this.title = title;
         this.logo = logo;

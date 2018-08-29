@@ -8,7 +8,7 @@ import * as _ from 'lodash';
 export class EpisodeService {
 
     private episodesData: EpisodeData[];
-    private episodes: Episode[];
+    private episodes: Episode[] = [];
     private episodesSumUp: EpisodeSumUp[];
 
     constructor(private http: HttpClient) {}
@@ -25,7 +25,7 @@ export class EpisodeService {
         } else {
             return this.loadEpisodesData()
                 .then((episodes: EpisodeData[]) => {
-                    return Promise.resolve(this.buildEpisodesSumUp(id))
+                    return Promise.resolve(this.buildEpisode(id))
                 });
         }
     }
