@@ -37,9 +37,13 @@ export class SoundService {
         this.nativeAudio.preloadSimple(sound.fileName, SoundService.AUDIO_FILES_PATH + sound.episodeId + '/' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
             .then(
                 () => {
-                    this.nativeAudio.play(sound.fileName, callbackDonePlaying);
+                    this.nativeAudio.play(sound.fileName, () => {
+                        callbackDonePlaying();
+                        this.nativeAudio.unload(sound.fileName);
+                    });
                 }, 
                 () => {
+                    this.nativeAudio.unload(sound.fileName);
                     callbackDonePlaying();
                     console.log('Impossible de charger le fichier ' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
                 });
