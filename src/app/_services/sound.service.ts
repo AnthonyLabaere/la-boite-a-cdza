@@ -8,8 +8,8 @@ export class SoundService {
 
     private static SOUNDS_DATA_FILE_PATH = '../assets/data/sounds.json';
 
-    private static AUDIO_FILES_PATH = 'assets/sounds/';
-    private static AUDIO_FILE_EXTENSION = '.mp3';
+    public static AUDIO_FILES_PATH = 'assets/sounds/';
+    public static AUDIO_FILE_EXTENSION = '.mp3';
 
     private soundsData: SoundData[];
 
@@ -33,18 +33,16 @@ export class SoundService {
         }
     }
 
-    public playSound(sound: Sound) {
-        // TODO : jouer les mp3 d'une manière plus éléguante ?
+    public playSound(sound: Sound, callbackDonePlaying: () => void) {
+        console.log('playSound');
         this.nativeAudio.preloadSimple(sound.fileName, SoundService.AUDIO_FILES_PATH + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
-            .then((res: any) => {})
-            .catch(error => {
-                console.log('Impossible de charger le fichier ' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
-            });
-  
-        this.nativeAudio.play(sound.fileName)
-            .then((res: any) => {})
-            .catch(error => {
-                console.log('Impossible de jouer le fichier ' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
-            });
+            .then(
+                () => {
+                    this.nativeAudio.play(sound.fileName, callbackDonePlaying);
+                }, 
+                () => {
+                    callbackDonePlaying();
+                    console.log('Impossible de charger le fichier ' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
+                });
     }
 }

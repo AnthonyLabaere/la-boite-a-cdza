@@ -86,6 +86,7 @@ export class Sound {
     title: string;
     fileName: string;
     logo: Image;
+    state: string = 'inactive';
 
     constructor(id: number, title: string, fileName:string, logo?: Image) {
         this.id = id;
