@@ -5,10 +5,10 @@ import { EpisodeSumUp } from '../../app/entities';
 import { EpisodePage } from '../episode/episode';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-episodes',
+  templateUrl: 'episodes.html'
 })
-export class HomePage implements OnInit {
+export class EpisodesPage implements OnInit {
 
   public episodes: EpisodeSumUp[] = [];
 

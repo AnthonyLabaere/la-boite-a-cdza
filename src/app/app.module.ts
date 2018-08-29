@@ -9,12 +9,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { EpisodesPage } from '../pages/episodes/episodes';
 import { EpisodeService } from './_services/episode.service';
 import { ProtagonistService } from './_services/protagonist.service';
 import { SoundService } from './_services/sound.service';
 import { EpisodePage } from '../pages/episode/episode';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -23,8 +24,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    EpisodePage
+    EpisodesPage,
+    EpisodePage,
+    ProtagonistsPage
   ],
   imports: [
     BrowserModule,
@@ -42,8 +44,9 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    EpisodePage
+    EpisodesPage,
+    EpisodePage,
+    ProtagonistsPage
   ],
   providers: [
     NativeAudio,

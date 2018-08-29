@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'title' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-card *ngFor="let protagonist of protagonists" (click)="onProtagonistClick(protagonist.id)">
+        <img src="assets/imgs/protagonists/{{protagonist.logo.fileName}}" alt="{{protagonist.logo.description}}" />
+    </ion-card>
+</ion-content>
+      

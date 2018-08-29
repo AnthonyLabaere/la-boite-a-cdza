@@ -3,14 +3,16 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { EpisodesPage } from '../pages/episodes/episodes';
 import { TranslateService } from '@ngx-translate/core';
+import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  episodesTab: any = EpisodesPage;
+  protagonistsTab: any = ProtagonistsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, translate: TranslateService) {
     platform.ready().then(() => {

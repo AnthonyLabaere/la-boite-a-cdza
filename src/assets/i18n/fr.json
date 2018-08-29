@@ -1,5 +1,9 @@
 {
-    "home": {
-        "title": "La boîte à CDZA"
+    "title": "La boîte à CDZA",
+    "episodes": {
+        "title": "Épisodes"
+    },
+    "protagonists": {
+        "title": "Personnages"
     }
 }
