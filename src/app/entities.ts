@@ -14,8 +14,14 @@ export class Episode {
         this.sounds = sounds;
     }
 
-    public static constructFromData(episodeData: EpisodeData): Episode {
-        return new Episode(episodeData.id, episodeData.title, episodeData.logo, null);
+    public static constructFromData(episodeData: EpisodeData, soundsData: SoundData[]): Episode {
+        const sounds:Sound[] = [];
+
+        soundsData.forEach((soundData: SoundData) => {
+            sounds.push(Sound.constructFromData(soundData));
+        });
+
+        return new Episode(episodeData.id, episodeData.title, episodeData.logo, sounds);
     }
 }
 
@@ -73,7 +79,12 @@ export class Sound {
     constructor(id: number, title: string, fileName:string, logo?: Image) {
         this.id = id;
         this.title = title;
+        this.fileName = fileName;
         this.logo = logo;
+    }
+
+    public static constructFromData(soundData: SoundData) {
+        return new Sound(soundData.id, soundData.title, soundData.fileName, soundData.logo);
     }
 }
 
@@ -108,13 +119,15 @@ export class SoundData {
     episodeId: number;
     protagonistId: number;    
     title: string;
+    fileName: string;
     logo: Image;
 
-    constructor(id: number, episodeId: number, protagonistId: number, title: string, logo?: Image) {
+    constructor(id: number, episodeId: number, protagonistId: number, title: string, fileName: string, logo?: Image) {
         this.id = id;
         this.episodeId = episodeId;
         this.protagonistId = protagonistId;
         this.title = title;
+        this.fileName = fileName;
         this.logo = logo;
     }
 }

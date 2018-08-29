@@ -1,11 +1,11 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>{{episode.title}}</ion-title>
+        <ion-title>{{episode?.title}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
-    <!-- <ion-card *ngFor="let sound of episode.sounds" (click)="onSoundClick(sound)">
-        <div class="card-title">{{sound.title}}</div>
-    </ion-card> -->
+    <ion-card *ngFor="let sound of episode?.sounds" (click)="onSoundClick(sound)">
+        <div class="card-title">{{sound?.title}}</div>
+    </ion-card>
 </ion-content>

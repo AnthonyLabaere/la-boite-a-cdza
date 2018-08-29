@@ -9,21 +9,21 @@ export class SoundService {
 
     constructor(private http: HttpClient) {}
 
-    public getSoundsData(): SoundData[] {
-        return this.soundsData;
-    }
-
-    public loadSoundsData(): Promise<SoundData[]> {
-        return new Promise(resolve => {
-            this.http.get("../assets/data/sounds.json")
-            .subscribe(
-                (soundsData: SoundData[]) => {
-                    this.soundsData = soundsData;
-
-                    resolve(soundsData);
-                },
-                error => {}
-            );
-        });
+    public getSoundsData(): Promise<SoundData[]> {
+        if (this.soundsData) {
+            return Promise.resolve(this.soundsData);
+        } else {
+            return new Promise(resolve => {
+                this.http.get("../assets/data/sounds.json")
+                .subscribe(
+                    (soundsData: SoundData[]) => {
+                        this.soundsData = soundsData;
+    
+                        resolve(soundsData);
+                    },
+                    error => {}
+                );
+            });
+        }
     }
 }

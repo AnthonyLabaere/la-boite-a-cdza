@@ -1,3 +1,16 @@
 [
-    
+    {
+        "id": 1,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Running gag",
+        "fileName": "running-gag"
+    },
+    {
+        "id": 2,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Cassettes de pépé",
+        "fileName": "cassettes-pepe"
+    }
 ]

@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import { EpisodeData, EpisodeSumUp, Episode } from '../entities';
+import { EpisodeData, EpisodeSumUp, Episode, SoundData } from '../entities';
 import { HttpClient } from '@angular/common/http';
 
 import * as _ from 'lodash';
+import { SoundService } from './sound.service';
 
 @Injectable()
 export class EpisodeService {
@@ -11,7 +12,7 @@ export class EpisodeService {
     private episodes: Episode[] = [];
     private episodesSumUp: EpisodeSumUp[];
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private soundService: SoundService) {}
 
     public getEpisode(id: number): Promise<Episode> {
         let episode = _.find(this.episodes, (episode: Episode) => {
@@ -20,59 +21,67 @@ export class EpisodeService {
 
         if (episode) {
             return Promise.resolve(episode);
-        } else if (this.episodesData) {
-            return Promise.resolve(this.buildEpisode(id));
         } else {
-            return this.loadEpisodesData()
-                .then((episodes: EpisodeData[]) => {
-                    return Promise.resolve(this.buildEpisode(id))
+            let episodesData: EpisodeData[];
+            return this.getEpisodesData()
+                .then((episodesDataTmp: EpisodeData[]) => {
+                    episodesData = episodesDataTmp;
+                    return this.soundService.getSoundsData();
+                })
+                .then((soundsData: SoundData[]) => {
+                    return Promise.resolve(this.buildEpisode(id, episodesData, soundsData));
                 });
         }
     }
 
-    public getEpisodesSumUp(): Promise<EpisodeData[]> {
+    public getEpisodesSumUp(): Promise<EpisodeSumUp[]> {
         if (this.episodesSumUp) {
             return Promise.resolve(this.episodesSumUp);
-        } else if (this.episodesData) {
-            return Promise.resolve(this.buildEpisodesSumUp());
         } else {
-            return this.loadEpisodesData()
-                .then((episodes: EpisodeData[]) => {
-                    return Promise.resolve(this.buildEpisodesSumUp())
+            return this.getEpisodesData()
+                .then((episodesData: EpisodeData[]) => {
+                    return Promise.resolve(this.buildEpisodesSumUp(episodesData));
                 });
         }
     }
 
-    private loadEpisodesData(): Promise<EpisodeData[]> {
-        return new Promise(resolve => {
-            this.http.get("../assets/data/episodes.json")
-            .subscribe(
-                (episodesData: EpisodeData[]) => {
-                    this.episodesData = episodesData;
-
-                    resolve(episodesData);
-                },
-                error => {}
-            );
-        });
+    private getEpisodesData(): Promise<EpisodeData[]> {
+        if (this.episodesData) {
+            return Promise.resolve(this.episodesData);
+        } else {
+            return new Promise(resolve => {
+                this.http.get("../assets/data/episodes.json")
+                .subscribe(
+                    (episodesData: EpisodeData[]) => {
+                        this.episodesData = episodesData;
+    
+                        resolve(episodesData);
+                    },
+                    error => {}
+                );
+            });
+        }
     }
     
-    private buildEpisodesSumUp(): EpisodeSumUp[] {
+    private buildEpisodesSumUp(episodesData: EpisodeData[]): EpisodeSumUp[] {
         const episodesSumUp: EpisodeSumUp[] = [];
 
-        this.episodesData.forEach((episodeData: EpisodeData) => {
+        episodesData.forEach((episodeData: EpisodeData) => {
             episodesSumUp.push(EpisodeSumUp.constructFromData(episodeData));
         });
 
         return episodesSumUp;
     }
     
-    private buildEpisode(id: number): Episode {
-        const episodeData = _.find(this.episodesData, (episodeData: EpisodeData) => {
+    private buildEpisode(id: number, episodesData: EpisodeData[], soundsData: SoundData[]): Episode {
+        const episodeData:EpisodeData = _.find(episodesData, (episodeData: EpisodeData) => {
             return episodeData.id === id;
         });
+        const episodeSoundsData:SoundData[] = soundsData.filter((soundData: SoundData) => {
+            return soundData.episodeId === id;
+        });
 
-        const episode = Episode.constructFromData(episodeData);
+        const episode = Episode.constructFromData(episodeData, episodeSoundsData);
 
         // Sauvegarde de l'épisode
         this.episodes.push(episode);
