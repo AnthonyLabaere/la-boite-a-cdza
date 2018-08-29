@@ -1,5 +1,7 @@
 page-episode {
-    .icons-basic-page {
+    .images-page {
+        background-image: url("../../assets/imgs/background.jpg");
+
         ion-row {
             -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
@@ -12,7 +14,11 @@ page-episode {
             flex: 0 0 50%;
             max-width: 50%;
             text-align: center;
-            padding: 10px 5px;
+            padding: 15px 10px;
+
+            img {
+                border: 5px solid white;
+            }
         }
         ion-icon {
             position: absolute;
@@ -21,7 +27,7 @@ page-episode {
             color: #fff;
 
             &[name="musical-note"] {
-                left: 46%;
+                left: 44%;
             }
         }
     }

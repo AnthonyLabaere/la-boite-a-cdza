@@ -4,7 +4,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="icons-basic-page">
+<ion-content class="images-page">
     <ion-row>
         <ion-col *ngFor="let sound of episode?.sounds" (click)="onSoundClick(sound)">
             <img src="assets/imgs/sounds/{{sound.logo.fileName}}" alt="{{sound.logo.description}}" [@sound]="sound.state">
