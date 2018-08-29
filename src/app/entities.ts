@@ -47,10 +47,21 @@ export class Protagonist {
     logo: Image;
     sounds: Sound[];
 
-    constructor(id: number, name: string, logo: Image) {
+    constructor(id: number, name: string, logo: Image, sounds: Sound[]) {
         this.id = id;
         this.name = name;
         this.logo = logo;
+        this.sounds = sounds;
+    }
+
+    public static constructFromData(protagonistData: ProtagonistData, soundsData: SoundData[]): Protagonist {
+        const sounds:Sound[] = [];
+
+        soundsData.forEach((soundData: SoundData) => {
+            sounds.push(Sound.constructFromData(soundData));
+        });
+
+        return new Protagonist(protagonistData.id, protagonistData.name, protagonistData.logo, sounds);
     }
 }
 
