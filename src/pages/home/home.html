@@ -4,9 +4,10 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let episode of episodes" (click)="onEpisodeClick(episode)">
+    <img src="assets/imgs/episodes/{{episode.logo.fileName}}" alt="{{episode.logo.description}}" />
+    <!-- <div class="card-title">{{episode.title}}</div> -->
+    <!-- <div class="card-subtitle" [translate]="'home.episode.subtitle'" [translateParams]="{soundsNumber: episode.sounds.length}"></div> -->
+  </ion-card>
 </ion-content>

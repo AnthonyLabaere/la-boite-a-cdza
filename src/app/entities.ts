@@ -1,4 +1,73 @@
 
+//region "DTO"
+
+export class Episode {
+    id: number;
+    title: string;
+    logo: Image;
+    sounds: Sound[];
+
+    constructor(id: number, title: string, logo: Image, sounds: Sound[]) {
+        this.id = id;
+        this.title = title;
+        this.logo = logo;
+        this.sounds = sounds;
+    }
+}
+
+export class EpisodeSumUp {
+    id: number;
+    title: string;
+    logo: Image;
+
+    constructor(id: number, title: string, logo: Image) {
+        this.id = id;
+        this.title = title;
+        this.logo = logo;
+    }
+
+    public static constructFromData(episodeData: EpisodeData): EpisodeSumUp {
+        return new EpisodeSumUp(episodeData.id, episodeData.title, episodeData.logo);
+    }
+}
+
+export class Protagonist {
+    id: number;
+    name: string;
+    logo: Image;
+    sounds: Sound[];
+
+    constructor(id: number, name: string, logo: Image) {
+        this.id = id;
+        this.name = name;
+        this.logo = logo;
+    }
+}
+
+export class ProtagonistSumUp {
+    id: number;
+    name: string;
+    logo: Image;
+
+    constructor(id: number, name: string, logo: Image) {
+        this.id = id;
+        this.name = name;
+        this.logo = logo;
+    }
+}
+
+export class Sound {
+    id: number;   
+    title: string;
+    logo: Image;
+
+    constructor(id: number, title: string, logo?: Image) {
+        this.id = id;
+        this.title = title;
+        this.logo = logo;
+    }
+}
+
 //region Data
 
 export class EpisodeData {
@@ -50,13 +119,16 @@ export class Image {
     description: string;
 }
 
+// TODO : à utiliser pour avoir une véritable internationalisation
 export class LocalizedString {
     default: string;
     fr: string;
     en: string;
 
-    constructor(fr: string, en: string) {
-        
+    constructor(_default: string, fr: string, en: string) {
+        this.default = _default;
+        this.fr = fr;
+        this.en = en;
     }
 }
 
