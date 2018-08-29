@@ -11,6 +11,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EpisodeService } from './_services/episode.service';
 import { ProtagonistService } from './_services/protagonist.service';
+import { SoundService } from './_services/sound.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -43,7 +44,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EpisodeService,
-    ProtagonistService
+    ProtagonistService,
+    SoundService
   ]
 })
 export class AppModule {}

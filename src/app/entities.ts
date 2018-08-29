@@ -13,6 +13,10 @@ export class Episode {
         this.logo = logo;
         this.sounds = sounds;
     }
+
+    public static constructFromData(episodeData: EpisodeData): Episode {
+        return new Episode(episodeData.id, episodeData.title, episodeData.logo, null);
+    }
 }
 
 export class EpisodeSumUp {
