@@ -9,6 +9,7 @@
         <ion-col *ngFor="let sound of episode?.sounds" (click)="onSoundClick(sound)">
             <img src="assets/imgs/sounds/{{sound.episodeId}}/{{sound.logo.fileName}}" alt="{{sound.logo.description}}" [@sound]="sound.state">
             <ion-icon *ngIf="sound.state === 'active'" name="musical-note"></ion-icon>
+            <div>{{sound.title}}</div>
         </ion-col>
     </ion-row>
         
