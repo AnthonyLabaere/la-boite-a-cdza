@@ -82,21 +82,23 @@ export class ProtagonistSumUp {
 }
 
 export class Sound {
-    id: number;   
+    id: number;
+    episodeId: number; // PArt of the logo' file path
     title: string;
     fileName: string;
     logo: Image;
     state: string = 'inactive';
 
-    constructor(id: number, title: string, fileName:string, logo?: Image) {
+    constructor(id: number, episodeId: number, title: string, fileName:string, logo?: Image) {
         this.id = id;
+        this.episodeId = episodeId;
         this.title = title;
         this.fileName = fileName;
         this.logo = logo;
     }
 
     public static constructFromData(soundData: SoundData) {
-        return new Sound(soundData.id, soundData.title, soundData.fileName, soundData.logo);
+        return new Sound(soundData.id, soundData.episodeId, soundData.title, soundData.fileName, soundData.logo);
     }
 }
 

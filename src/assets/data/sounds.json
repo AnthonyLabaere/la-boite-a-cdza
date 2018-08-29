@@ -3,22 +3,84 @@
         "id": 1,
         "episodeId": 1,
         "protagonistId": 1,
-        "title": "Running gag",
-        "fileName": "running-gag",
+        "title": "Cassettes de pépé",
+        "fileName": "cassettes-pepe",
+        "time": 46,
         "logo": {
-            "fileName": "running-gag.png",
-            "description": "Running gag"
+            "fileName": "cassettes-pepe.png",
+            "description": "Cassettes de pépé"
         }
     },
     {
         "id": 2,
         "episodeId": 1,
         "protagonistId": 1,
-        "title": "Cassettes de pépé",
-        "fileName": "cassettes-pepe",
+        "title": "Running gag",
+        "fileName": "running-gag",
+        "time": 148,
         "logo": {
-            "fileName": "cassettes-pepe.png",
-            "description": "Cassettes de pépé"
+            "fileName": "running-gag.png",
+            "description": "Running gag"
+        }
+    },
+    {
+        "id": 3,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Une heure",
+        "fileName": "une-heure",
+        "time": 214,
+        "logo": {
+            "fileName": "une-heure.png",
+            "description": "Une heure"
+        }
+    },
+    {
+        "id": 4,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Armure assaisonnée",
+        "fileName": "armure-assaisonnee",
+        "time": 245,
+        "logo": {
+            "fileName": "armure-assaisonnee.png",
+            "description": "Armure assaisonnée"
+        }
+    },
+    {
+        "id": 5,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Un homme",
+        "fileName": "un-homme",
+        "time": 274,
+        "logo": {
+            "fileName": "un-homme.png",
+            "description": "Un homme"
+        }
+    },
+    {
+        "id": 6,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Iron man",
+        "fileName": "iron-man",
+        "time": 279,
+        "logo": {
+            "fileName": "iron-man.png",
+            "description": "Iron man"
+        }
+    },
+    {
+        "id": 7,
+        "episodeId": 1,
+        "protagonistId": 1,
+        "title": "Intuition féminine",
+        "fileName": "intuition-feminine",
+        "time": 285,
+        "logo": {
+            "fileName": "intuition-feminine.png",
+            "description": "Intuition féminine"
         }
     }
 ]
