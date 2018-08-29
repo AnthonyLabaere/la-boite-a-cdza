@@ -1,5 +1,7 @@
 {
   "name": "la-boite-a-cdza",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
