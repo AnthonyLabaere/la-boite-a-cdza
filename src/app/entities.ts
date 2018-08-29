@@ -54,6 +54,10 @@ export class ProtagonistSumUp {
         this.name = name;
         this.logo = logo;
     }
+
+    public static constructFromData(protagonistData: ProtagonistData): ProtagonistSumUp {
+        return new ProtagonistSumUp(protagonistData.id, protagonistData.name, protagonistData.logo);
+    }
 }
 
 export class Sound {

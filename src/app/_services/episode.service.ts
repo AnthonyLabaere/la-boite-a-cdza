@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { EpisodeData, ProtagonistData, SoundData, EpisodeSumUp } from '../entities';
+import { EpisodeData, EpisodeSumUp } from '../entities';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
@@ -8,17 +8,8 @@ export class EpisodeService {
     private episodesData: EpisodeData[];
     private episodesSumUp: EpisodeSumUp[];
 
-    private protagonistsData: ProtagonistData[];
-    private protagonistsSumUp: EpisodeSumUp[];
-
-    private soundsData: SoundData[];
-
     constructor(private http: HttpClient) {}
 
-    ngOnInit(){
-        
-    }
-    
     public getEpisodesSumUp(): Promise<EpisodeData[]> {
         if (this.episodesSumUp) {
             return Promise.resolve(this.episodesSumUp);
