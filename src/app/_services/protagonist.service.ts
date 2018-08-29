@@ -6,6 +6,8 @@ import { SoundService } from './sound.service';
 @Injectable()
 export class ProtagonistService {
 
+    private static PROTAGONISTS_DATA_FILE_PATH = '../assets/data/protagonists.json';
+
     private protagonistsData: ProtagonistData[];
     private protagonists: Protagonist[] = [];
     private protagonistsSumUp: ProtagonistSumUp[];
@@ -48,7 +50,7 @@ export class ProtagonistService {
             return Promise.resolve(this.protagonistsData);
         } else {
             return new Promise(resolve => {
-                this.http.get("../assets/data/protagonists.json")
+                this.http.get(ProtagonistService.PROTAGONISTS_DATA_FILE_PATH)
                 .subscribe(
                     (protagonistsData: ProtagonistData[]) => {
                         this.protagonistsData = protagonistsData;

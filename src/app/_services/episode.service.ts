@@ -8,6 +8,8 @@ import { SoundService } from './sound.service';
 @Injectable()
 export class EpisodeService {
 
+    private static EPISODES_DATA_FILE_PATH = '../assets/data/episodes.json';
+
     private episodesData: EpisodeData[];
     private episodes: Episode[] = [];
     private episodesSumUp: EpisodeSumUp[];
@@ -50,7 +52,7 @@ export class EpisodeService {
             return Promise.resolve(this.episodesData);
         } else {
             return new Promise(resolve => {
-                this.http.get("../assets/data/episodes.json")
+                this.http.get(EpisodeService.EPISODES_DATA_FILE_PATH)
                 .subscribe(
                     (episodesData: EpisodeData[]) => {
                         this.episodesData = episodesData;
