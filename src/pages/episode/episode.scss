@@ -1,7 +1,21 @@
 page-episode {
-    .card-background-page {
-        ion-card {
-          height: 100px;
+    .icons-basic-page {
+        ion-row {
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        ion-col {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+            max-width: 25%;
+            text-align: center;
+            padding: 10px 5px;
+        }
+        ion-icon {
+            font-size: 50px;
         }
     }
 }

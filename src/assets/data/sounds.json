@@ -4,13 +4,21 @@
         "episodeId": 1,
         "protagonistId": 1,
         "title": "Running gag",
-        "fileName": "running-gag"
+        "fileName": "running-gag",
+        "logo": {
+            "fileName": "running-gag.png",
+            "description": "Running gag"
+        }
     },
     {
         "id": 2,
         "episodeId": 1,
         "protagonistId": 1,
         "title": "Cassettes de pépé",
-        "fileName": "cassettes-pepe"
+        "fileName": "cassettes-pepe",
+        "logo": {
+            "fileName": "cassettes-pepe.png",
+            "description": "Cassettes de pépé"
+        }
     }
 ]

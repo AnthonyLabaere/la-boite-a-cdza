@@ -1,6 +1,9 @@
 import {Injectable} from '@angular/core';
 import { ProtagonistData, ProtagonistSumUp, SoundData, Protagonist } from '../entities';
 import { HttpClient } from '@angular/common/http';
+
+import * as _ from 'lodash';
+
 import { SoundService } from './sound.service';
 
 @Injectable()

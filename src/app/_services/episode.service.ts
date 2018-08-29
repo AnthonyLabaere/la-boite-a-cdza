@@ -3,6 +3,7 @@ import { EpisodeData, EpisodeSumUp, Episode, SoundData } from '../entities';
 import { HttpClient } from '@angular/common/http';
 
 import * as _ from 'lodash';
+
 import { SoundService } from './sound.service';
 
 @Injectable()
