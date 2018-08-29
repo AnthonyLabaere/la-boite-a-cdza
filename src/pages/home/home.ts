@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { CommonService } from '../../app/_services/common.service';
+import { EpisodeService } from '../../app/_services/episode.service';
 import { EpisodeSumUp } from '../../app/entities';
 
 @Component({
@@ -11,12 +11,12 @@ export class HomePage implements OnInit {
 
   public episodes: EpisodeSumUp[] = [];
 
-  constructor(public navCtrl: NavController, private commonService: CommonService) {
+  constructor(public navCtrl: NavController, private episodeService: EpisodeService) {
     
   }
 
   ngOnInit(){
-    this.commonService.getEpisodesSumUp()
+    this.episodeService.getEpisodesSumUp()
       .then((episodesSumUp: EpisodeSumUp[]) => {
         this.episodes = episodesSumUp;
       });
