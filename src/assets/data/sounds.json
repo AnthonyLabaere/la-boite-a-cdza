@@ -2,7 +2,7 @@
     {
         "id": 1,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": 6,
         "title": "Cassettes de pépé",
         "fileName": "cassettes-pepe",
         "time": 46,
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": 3,
         "title": "Running gag",
         "fileName": "running-gag",
         "time": 148,
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": 2,
         "title": "Une heure",
         "fileName": "une-heure",
         "time": 214,
@@ -38,7 +38,7 @@
     {
         "id": 4,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Armure assaisonnée",
         "fileName": "armure-assaisonnee",
         "time": 245,
@@ -50,7 +50,7 @@
     {
         "id": 5,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Un homme",
         "fileName": "un-homme",
         "time": 274,
@@ -62,7 +62,7 @@
     {
         "id": 6,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Iron man",
         "fileName": "iron-man",
         "time": 279,
@@ -74,7 +74,7 @@
     {
         "id": 7,
         "episodeId": 1,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Intuition féminine",
         "fileName": "intuition-feminine",
         "time": 285,

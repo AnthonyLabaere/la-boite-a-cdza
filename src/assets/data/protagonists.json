@@ -38,5 +38,13 @@
            "fileName": "ikki.png",
            "description": "Ikki"
        }
+   },
+   {
+       "id": 6,
+       "name": "Saori",
+       "logo": {
+           "fileName": "",
+           "description": "Saori"
+       }
    }
 ]

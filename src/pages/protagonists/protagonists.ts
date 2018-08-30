@@ -18,7 +18,9 @@ export class ProtagonistsPage implements OnInit {
   ngOnInit(){
     this.protagonistService.getProtagonistsSumUp()
       .then((protagonistsSumUp: ProtagonistSumUp[]) => {
-        this.protagonists = protagonistsSumUp;
+        this.protagonists = protagonistsSumUp.filter(protagonist => {
+          return protagonist.logo.fileName.length > 0;
+        });
       });
   }
 
