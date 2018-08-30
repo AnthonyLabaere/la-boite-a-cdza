@@ -1,3 +1,42 @@
 [
-    
+   {
+       "id": 1,
+       "name": "Seya",
+       "logo": {
+           "fileName": "seya.png",
+           "description": "Seya"
+       }
+   },
+   {
+       "id": 2,
+       "name": "Shiryu",
+       "logo": {
+           "fileName": "shiryu.png",
+           "description": "Shiryu"
+       }
+   },
+   {
+       "id": 3,
+       "name": "Hyoga",
+       "logo": {
+           "fileName": "hyoga.png",
+           "description": "Hyoga"
+       }
+   },
+   {
+       "id": 4,
+       "name": "Shun",
+       "logo": {
+           "fileName": "shun.png",
+           "description": "Shun"
+       }
+   },
+   {
+       "id": 5,
+       "name": "Ikki",
+       "logo": {
+           "fileName": "ikki.png",
+           "description": "Ikki"
+       }
+   }
 ]
