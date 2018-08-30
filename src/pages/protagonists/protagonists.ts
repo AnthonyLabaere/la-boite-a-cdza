@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProtagonistSumUp } from '../../app/entities';
 import { ProtagonistService } from '../../app/_services/protagonist.service';
+import { ProtagonistPage } from '../protagonist/protagonist';
 
 @Component({
   selector: 'page-protagonists',
@@ -25,7 +26,7 @@ export class ProtagonistsPage implements OnInit {
   }
 
   public onProtagonistClick(protagonistId: number) {
-    // this.navCtrl.push(ProtagonistPage, {protagonistId: protagonistId});
+    this.navCtrl.push(ProtagonistPage, {'protagonistId': protagonistId});
   }
 
 }

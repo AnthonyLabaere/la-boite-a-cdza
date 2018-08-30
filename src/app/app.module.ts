@@ -18,6 +18,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 import { AboutPage } from '../pages/about/about';
+import { ProtagonistPage } from '../pages/protagonist/protagonist';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     EpisodesPage,
     EpisodePage,
     AboutPage,
-    ProtagonistsPage
+    ProtagonistsPage,
+    ProtagonistPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     EpisodesPage,
     EpisodePage,
     AboutPage,
-    ProtagonistsPage
+    ProtagonistsPage,
+    ProtagonistPage
   ],
   providers: [
     NativeAudio,
