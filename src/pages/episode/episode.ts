@@ -1,5 +1,5 @@
-import { Component, NgZone } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, NgZone, ViewChild } from '@angular/core';
+import { NavController, NavParams, Navbar } from 'ionic-angular';
 import {
   trigger,
   state,
@@ -29,8 +29,12 @@ import { SoundService } from '../../app/_services/sound.service';
   ]
 })
 export class EpisodePage {
+  
+  @ViewChild(Navbar) navBar: Navbar;
 
   public episode: Episode;
+
+  private playingSound: Sound;
 
   constructor(private zone: NgZone, public navCtrl: NavController, public navParams: NavParams, private episodeService: EpisodeService, private soundService: SoundService) {
       this.episodeService.getEpisode(this.navParams.get('episodeId'))
@@ -39,15 +43,34 @@ export class EpisodePage {
         });
   }
 
+  ionViewDidLoad() {
+    this.navBar.backButtonClick = (e:UIEvent)=>{
+      if (this.playingSound) {
+        this.playingSound.state = 'inactive';
+        this.soundService.stopSound(this.playingSound);
+        this.playingSound = undefined;
+      }
+      this.navCtrl.pop();
+    }
+  }
+
   public onSoundClick(sound: Sound) {
     if (sound.state === 'active') {
+      this.playingSound = undefined;
+
       sound.state = 'inactive';
       this.soundService.stopSound(sound);
     } else {
+      this.playingSound = sound;
+
       sound.state = 'active';
 
       this.soundService.playSound(sound, () => {
         this.zone.run(() => {
+          if (this.playingSound && this.playingSound.id === sound.id) {
+            this.playingSound = undefined;
+          }
+
           sound.state = 'inactive';
         });
       });
