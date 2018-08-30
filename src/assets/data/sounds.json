@@ -82,5 +82,125 @@
             "fileName": "intuition-feminine.png",
             "description": "Intuition féminine"
         }
+    },
+    {
+        "id": 8,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Redbull",
+        "fileName": "redbull",
+        "time": 116,
+        "logo": {
+            "fileName": "redbull.png",
+            "description": "Redbull"
+        }
+    },
+    {
+        "id": 9,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Isolation",
+        "fileName": "isolation",
+        "time": 125,
+        "logo": {
+            "fileName": "isolation.png",
+            "description": "Isolation"
+        }
+    },
+    {
+        "id": 10,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Cailloux",
+        "fileName": "cailloux",
+        "time": 149,
+        "logo": {
+            "fileName": "cailloux.png",
+            "description": "Cailloux"
+        }
+    },
+    {
+        "id": 11,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Hanté",
+        "fileName": "hante",
+        "time": 173,
+        "logo": {
+            "fileName": "hante.png",
+            "description": "Hanté"
+        }
+    },
+    {
+        "id": 12,
+        "episodeId": 2,
+        "protagonistId": -1,
+        "title": "Épargnant",
+        "fileName": "epargnant",
+        "time": 272,
+        "logo": {
+            "fileName": "epargnant.png",
+            "description": "Épargnant"
+        }
+    },
+    {
+        "id": 13,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Sailor moon",
+        "fileName": "sailor-moon",
+        "time": 306,
+        "logo": {
+            "fileName": "sailor-moon.png",
+            "description": "Sailor moon"
+        }
+    },
+    {
+        "id": 14,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Météores",
+        "fileName": "meteores",
+        "time": 312,
+        "logo": {
+            "fileName": "meteores.png",
+            "description": "Météores"
+        }
+    },
+    {
+        "id": 15,
+        "episodeId": 2,
+        "protagonistId": -1,
+        "title": "Ken",
+        "fileName": "ken",
+        "time": 349,
+        "logo": {
+            "fileName": "ken.png",
+            "description": "Ken"
+        }
+    },
+    {
+        "id": 16,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Oui c'est moi",
+        "fileName": "oui-c-moi",
+        "time": 116,
+        "logo": {
+            "fileName": "oui-c-moi.png",
+            "description": "Oui c'est moi"
+        }
+    },
+    {
+        "id": 17,
+        "episodeId": 2,
+        "protagonistId": 1,
+        "title": "Gueux",
+        "fileName": "gueux",
+        "time": 413,
+        "logo": {
+            "fileName": "gueux.png",
+            "description": "Gueux"
+        }
     }
 ]
