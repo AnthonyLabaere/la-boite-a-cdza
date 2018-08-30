@@ -202,5 +202,137 @@
             "fileName": "gueux.png",
             "description": "Gueux"
         }
+    },
+    {
+        "id": 18,
+        "episodeId": 3,
+        "protagonistId": 1,
+        "title": "Qui m'aime ?",
+        "fileName": "qui-m-aime",
+        "time": 4,
+        "logo": {
+            "fileName": "qui-m-aime.png",
+            "description": "Qui m'aime ?"
+        }
+    },
+    {
+        "id": 19,
+        "episodeId": 3,
+        "protagonistId": 3,
+        "title": "Tâche",
+        "fileName": "tache",
+        "time": 75,
+        "logo": {
+            "fileName": "tache.png",
+            "description": "Tâche"
+        }
+    },
+    {
+        "id": 20,
+        "episodeId": 3,
+        "protagonistId": 3,
+        "title": "Olive et tom",
+        "fileName": "olive-et-tom",
+        "time": 91,
+        "logo": {
+            "fileName": "olive-et-tom.png",
+            "description": "Olive et tom"
+        }
+    },
+    {
+        "id": 21,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "Mots",
+        "fileName": "mots",
+        "time": 150,
+        "logo": {
+            "fileName": "mots.png",
+            "description": "Mots"
+        }
+    },
+    {
+        "id": 22,
+        "episodeId": 3,
+        "protagonistId": 3,
+        "title": "Poussiere de diamant",
+        "fileName": "poussiere-diamant",
+        "time": 165,
+        "logo": {
+            "fileName": "poussiere-diamant.png",
+            "description": "Poussiere de diamant"
+        }
+    },
+    {
+        "id": 23,
+        "episodeId": 3,
+        "protagonistId": 1,
+        "title": "Traître",
+        "fileName": "traitre",
+        "time": 227,
+        "logo": {
+            "fileName": "traitre.png",
+            "description": "Traître"
+        }
+    },
+    {
+        "id": 24,
+        "episodeId": 3,
+        "protagonistId": 1,
+        "title": "Daredevil",
+        "fileName": "daredevil",
+        "time": 236,
+        "logo": {
+            "fileName": "daredevil.png",
+            "description": "Daredevil"
+        }
+    },
+    {
+        "id": 25,
+        "episodeId": 3,
+        "protagonistId": 1,
+        "title": "Aveugles",
+        "fileName": "aveugles",
+        "time": 227,
+        "logo": {
+            "fileName": "aveugles.png",
+            "description": "Aveugles"
+        }
+    },
+    {
+        "id": 26,
+        "episodeId": 3,
+        "protagonistId": 3,
+        "title": "Dormir",
+        "fileName": "dormir",
+        "time": 328,
+        "logo": {
+            "fileName": "dormir.png",
+            "description": "Dormir"
+        }
+    },
+    {
+        "id": 28,
+        "episodeId": 4,
+        "protagonistId": 1,
+        "title": "Affronter",
+        "fileName": "affronter",
+        "time": 424,
+        "logo": {
+            "fileName": "affronter.png",
+            "description": "Affronter"
+        }
+    },
+    {
+        "id": 29,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "Soeurs Olsen",
+        "fileName": "soeurs-olsen",
+        "time": 440,
+        "logo": {
+            "fileName": "soeurs-olsen.png",
+            "description": "Soeurs Olsen"
+        }
     }
 ]
