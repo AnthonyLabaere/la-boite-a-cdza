@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs (ionChange)="onTabsChange($event)">
     <ion-tab tabTitle="{{'episodes.title' | translate}}" [root]="episodesTab"></ion-tab>
     <ion-tab tabTitle="{{'protagonists.title' | translate}}" [root]="protagonistsTab"></ion-tab>
 </ion-tabs>`

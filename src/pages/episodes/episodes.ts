@@ -12,9 +12,7 @@ export class EpisodesPage implements OnInit {
 
   public episodes: EpisodeSumUp[] = [];
 
-  constructor(public navCtrl: NavController, private episodeService: EpisodeService) {
-    
-  }
+  constructor(public navCtrl: NavController, private episodeService: EpisodeService) {}
 
   ngOnInit(){
     this.episodeService.getEpisodesSumUp()
@@ -24,7 +22,6 @@ export class EpisodesPage implements OnInit {
   }
 
   public onEpisodeClick(episodeId: number) {
-    this.navCtrl.push(EpisodePage, {episodeId: episodeId});
+    this.navCtrl.push(EpisodePage, {'episodeId': episodeId});
   }
-
 }

@@ -1,5 +1,5 @@
 import { Component, NgZone, ViewChild } from '@angular/core';
-import { NavController, NavParams, Navbar } from 'ionic-angular';
+import { NavController, NavParams, Navbar, Events } from 'ionic-angular';
 import {
   trigger,
   state,
@@ -11,6 +11,7 @@ import {
 import { Episode, Sound } from '../../app/entities';
 import { EpisodeService } from '../../app/_services/episode.service';
 import { SoundService } from '../../app/_services/sound.service';
+import { MyApp } from '../../app/app.component';
 
 @Component({
   selector: 'page-episode',
@@ -29,6 +30,8 @@ import { SoundService } from '../../app/_services/sound.service';
   ]
 })
 export class EpisodePage {
+
+  public static EPISODE_ID_PARAM_KEY = 'episodeId';
   
   @ViewChild(Navbar) navBar: Navbar;
 
@@ -36,21 +39,32 @@ export class EpisodePage {
 
   private playingSound: Sound;
 
-  constructor(private zone: NgZone, public navCtrl: NavController, public navParams: NavParams, private episodeService: EpisodeService, private soundService: SoundService) {
-      this.episodeService.getEpisode(this.navParams.get('episodeId'))
+  constructor(private zone: NgZone, private navCtrl: NavController, private navParams: NavParams, private events: Events, 
+    private episodeService: EpisodeService, private soundService: SoundService) {
+      this.episodeService.getEpisode(this.navParams.get(EpisodePage.EPISODE_ID_PARAM_KEY))
         .then((episode: Episode) => {
           this.episode = episode;
+        });
+
+        this.events.subscribe(MyApp.ON_TABS_CHANGE, (id: string) => {
+          if (id !== MyApp.EPISODES_TAB_ID) {
+            this.stopPlayingSound();
+          }
         });
   }
 
   ionViewDidLoad() {
-    this.navBar.backButtonClick = (e:UIEvent)=>{
-      if (this.playingSound) {
-        this.playingSound.state = 'inactive';
-        this.soundService.stopSound(this.playingSound);
-        this.playingSound = undefined;
-      }
+    this.navBar.backButtonClick = (e:UIEvent)=> {
+      this.stopPlayingSound();
       this.navCtrl.pop();
+    }
+  }
+
+  private stopPlayingSound() {
+    if (this.playingSound) {
+      this.playingSound.state = 'inactive';
+      this.soundService.stopSound(this.playingSound);
+      this.playingSound = undefined;
     }
   }
 
