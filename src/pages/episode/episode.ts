@@ -11,7 +11,7 @@ import {
 import { Episode, Sound } from '../../app/entities';
 import { EpisodeService } from '../../app/_services/episode.service';
 import { SoundService } from '../../app/_services/sound.service';
-import { MyApp } from '../../app/app.component';
+import { LaBoiteACDZAApp } from '../../app/app.component';
 
 @Component({
   selector: 'page-episode',
@@ -46,8 +46,8 @@ export class EpisodePage {
           this.episode = episode;
         });
 
-        this.events.subscribe(MyApp.ON_TABS_CHANGE, (id: string) => {
-          if (id !== MyApp.EPISODES_TAB_ID) {
+        this.events.subscribe(LaBoiteACDZAApp.ON_TABS_CHANGE, (id: string) => {
+          if (id !== LaBoiteACDZAApp.EPISODES_TAB_ID) {
             this.stopPlayingSound();
           }
         });

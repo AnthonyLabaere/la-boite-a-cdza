@@ -10,7 +10,7 @@ import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class LaBoiteACDZAApp {
 
   public static ON_TABS_CHANGE = 'tabs:change';
   public static EPISODES_TAB_ID = 't0-0';
@@ -36,7 +36,7 @@ export class MyApp {
   }
 
   public onTabsChange(event: any) {
-    this.events.publish(MyApp.ON_TABS_CHANGE, event.id);
+    this.events.publish(LaBoiteACDZAApp.ON_TABS_CHANGE, event.id);
   }
 }
 

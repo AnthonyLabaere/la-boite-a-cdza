@@ -8,7 +8,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import { MyApp } from './app.component';
+import { LaBoiteACDZAApp } from './app.component';
 import { EpisodesPage } from '../pages/episodes/episodes';
 import { EpisodeService } from './_services/episode.service';
 import { ProtagonistService } from './_services/protagonist.service';
@@ -23,7 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    MyApp,
+    LaBoiteACDZAApp,
     EpisodesPage,
     EpisodePage,
     ProtagonistsPage
@@ -31,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(LaBoiteACDZAApp),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -43,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    LaBoiteACDZAApp,
     EpisodesPage,
     EpisodePage,
     ProtagonistsPage
