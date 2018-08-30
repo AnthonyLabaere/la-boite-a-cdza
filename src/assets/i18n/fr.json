@@ -5,5 +5,11 @@
     },
     "protagonists": {
         "title": "Personnages"
+    },
+    "about": {
+        "title": "À propos",
+        "content": {
+
+        }
     }
 }

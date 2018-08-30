@@ -16,6 +16,7 @@ import { SoundService } from './_services/sound.service';
 import { EpisodePage } from '../pages/episode/episode';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { ProtagonistsPage } from '../pages/protagonists/protagonists';
+import { AboutPage } from '../pages/about/about';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -26,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LaBoiteACDZAApp,
     EpisodesPage,
     EpisodePage,
+    AboutPage,
     ProtagonistsPage
   ],
   imports: [
@@ -46,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LaBoiteACDZAApp,
     EpisodesPage,
     EpisodePage,
+    AboutPage,
     ProtagonistsPage
   ],
   providers: [

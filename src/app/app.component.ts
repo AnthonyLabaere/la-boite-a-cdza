@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { EpisodesPage } from '../pages/episodes/episodes';
 import { TranslateService } from '@ngx-translate/core';
 import { ProtagonistsPage } from '../pages/protagonists/protagonists';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,10 +16,11 @@ export class LaBoiteACDZAApp {
   public static ON_TABS_CHANGE = 'tabs:change';
   public static EPISODES_TAB_ID = 't0-0';
   public static PROTAGONISTS_TAB_ID = 't0-1';
+  public static ABOUT_TAB_ID = 't0-2';
 
-  
   episodesTab: any = EpisodesPage;
   protagonistsTab: any = ProtagonistsPage;
+  aboutTab: any = AboutPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, translate: TranslateService, private events: Events) {
     platform.ready().then(() => {
