@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {
   trigger,
@@ -32,7 +32,7 @@ export class EpisodePage {
 
   public episode: Episode;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private episodeService: EpisodeService, private soundService: SoundService) {
+  constructor(private zone: NgZone, public navCtrl: NavController, public navParams: NavParams, private episodeService: EpisodeService, private soundService: SoundService) {
       this.episodeService.getEpisode(this.navParams.get('episodeId'))
         .then((episode: Episode) => {
           this.episode = episode;
@@ -40,12 +40,18 @@ export class EpisodePage {
   }
 
   public onSoundClick(sound: Sound) {
-    sound.state = 'active';
-
-    this.soundService.playSound(sound, () => {
-      console.log("callbackDonePlaying");
+    if (sound.state === 'active') {
       sound.state = 'inactive';
-    });
+      this.soundService.stopSound(sound);
+    } else {
+      sound.state = 'active';
+
+      this.soundService.playSound(sound, () => {
+        this.zone.run(() => {
+          sound.state = 'inactive';
+        });
+      });
+    }
   }
 
 }

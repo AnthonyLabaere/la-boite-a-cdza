@@ -13,6 +13,10 @@ export class SoundService {
 
     private soundsData: SoundData[];
 
+    // Enregistrement en cours de lecture
+    private playingSoundKey: string;
+    private playingSoundDonePlayingCallBack: () => void;
+
     constructor(private http: HttpClient, private nativeAudio: NativeAudio) {}
 
     public getSoundsData(): Promise<SoundData[]> {
@@ -33,19 +37,43 @@ export class SoundService {
         }
     }
 
-    public playSound(sound: Sound, callbackDonePlaying: () => void) {
+    public playSound(sound: Sound, donePlayingCallback: () => void) {
+        if (this.playingSoundKey) {
+            // Arrêt de l'enregistrement en cours
+            this.nativeAudio.stop(this.playingSoundKey);
+            this.nativeAudio.unload(this.playingSoundKey);
+
+            this.playingSoundKey = undefined;
+            if (this.playingSoundDonePlayingCallBack) {
+                this.playingSoundDonePlayingCallBack();
+            }
+        }
+
+        this.playingSoundKey = sound.fileName;
+        this.playingSoundDonePlayingCallBack = donePlayingCallback;
+
+        // Lancement de l'enregistrement
         this.nativeAudio.preloadSimple(sound.fileName, SoundService.AUDIO_FILES_PATH + sound.episodeId + '/' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
             .then(
                 () => {
                     this.nativeAudio.play(sound.fileName, () => {
-                        callbackDonePlaying();
+                        donePlayingCallback();
                         this.nativeAudio.unload(sound.fileName);
                     });
                 }, 
                 () => {
                     this.nativeAudio.unload(sound.fileName);
-                    callbackDonePlaying();
+                    // donePlayingCallback();
                     console.log('Impossible de charger le fichier ' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
                 });
+    }
+
+    public stopSound(sound: Sound) {
+        // Arrêt de l'enregistrement en cours
+        this.nativeAudio.stop(sound.fileName);
+        this.nativeAudio.unload(sound.fileName);
+
+        this.playingSoundKey = undefined;
+        this.playingSoundDonePlayingCallBack = undefined;
     }
 }
