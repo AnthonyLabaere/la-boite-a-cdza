@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { Platform, Events } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { EpisodesPage } from '../pages/episodes/episodes';
+import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { ProtagonistsPage } from '../pages/protagonists/protagonists';
+import { Events, Platform } from 'ionic-angular';
 import { AboutPage } from '../pages/about/about';
+import { EpisodesPage } from '../pages/episodes/episodes';
+import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 
 @Component({
   templateUrl: 'app.html'

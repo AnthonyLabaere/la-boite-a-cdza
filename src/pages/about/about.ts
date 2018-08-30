@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',

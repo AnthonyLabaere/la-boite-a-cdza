@@ -1,17 +1,11 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, NgZone, ViewChild } from '@angular/core';
-import { NavController, NavParams, Navbar, Events } from 'ionic-angular';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
-
+import { Events, Navbar, NavController, NavParams } from 'ionic-angular';
+import { LaBoiteACDZAApp } from '../../app/app.component';
 import { Episode, Sound } from '../../app/entities';
 import { EpisodeService } from '../../app/_services/episode.service';
 import { SoundService } from '../../app/_services/sound.service';
-import { LaBoiteACDZAApp } from '../../app/app.component';
+
 
 @Component({
   selector: 'page-episode',

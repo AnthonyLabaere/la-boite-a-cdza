@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { EpisodeService } from '../../app/_services/episode.service';
 import { EpisodeSumUp } from '../../app/entities';
+import { EpisodeService } from '../../app/_services/episode.service';
 import { EpisodePage } from '../episode/episode';
 
 @Component({
