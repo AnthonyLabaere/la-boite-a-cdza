@@ -15,6 +15,7 @@ import { ProtagonistService } from './_services/protagonist.service';
 import { SoundService } from './_services/sound.service';
 import { EpisodePage } from '../pages/episode/episode';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 import { AboutPage } from '../pages/about/about';
 
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     NativeAudio,
+    InAppBrowser,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
