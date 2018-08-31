@@ -605,10 +605,70 @@
         "protagonistId": 1,
         "title": "Hippie",
         "fileName": "hippie",
-        "time": 67,
+        "time": 375,
         "logo": {
             "fileName": "hippie.png",
             "description": "Hippie"
+        }
+    },
+    {
+        "id": 53,
+        "episodeId": 7,
+        "protagonistId": 3,
+        "title": "Tué",
+        "fileName": "tue",
+        "time": 124,
+        "logo": {
+            "fileName": "tue.png",
+            "description": "Tué"
+        }
+    },
+    {
+        "id": 54,
+        "episodeId": 7,
+        "protagonistId": -1,
+        "title": "Philatelie",
+        "fileName": "philatelie",
+        "time": 160,
+        "logo": {
+            "fileName": "philatelie.png",
+            "description": "Philatelie"
+        }
+    },
+    {
+        "id": 55,
+        "episodeId": 7,
+        "protagonistId": 3,
+        "title": "Traductions",
+        "fileName": "traductions",
+        "time": 240,
+        "logo": {
+            "fileName": "traductions.png",
+            "description": "Traductions"
+        }
+    },
+    {
+        "id": 56,
+        "episodeId": 7,
+        "protagonistId": 1,
+        "title": "Pastis",
+        "fileName": "pastis",
+        "time": 295,
+        "logo": {
+            "fileName": "pastis.png",
+            "description": "Pastis"
+        }
+    },
+    {
+        "id": 57,
+        "episodeId": 7,
+        "protagonistId": 1,
+        "title": "Poux",
+        "fileName": "poux",
+        "time": 422,
+        "logo": {
+            "fileName": "poux.png",
+            "description": "Poux"
         }
     }
 ]
