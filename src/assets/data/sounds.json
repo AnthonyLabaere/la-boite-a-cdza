@@ -334,5 +334,281 @@
             "fileName": "soeurs-olsen.png",
             "description": "Soeurs Olsen"
         }
+    },
+    {
+        "id": 30,
+        "episodeId": 4,
+        "protagonistId": 1,
+        "title": "Papier paint",
+        "fileName": "papier-paint",
+        "time": 67,
+        "logo": {
+            "fileName": "papier-paint.png",
+            "description": "Papier paint"
+        }
+    },
+    {
+        "id": 31,
+        "episodeId": 4,
+        "protagonistId": -1,
+        "title": "Feng shui",
+        "fileName": "feng-shui",
+        "time": 100,
+        "logo": {
+            "fileName": "feng-shui.png",
+            "description": "Feng shui"
+        }
+    },
+    {
+        "id": 32,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Meilleur ami",
+        "fileName": "meilleur-ami",
+        "time": 113,
+        "logo": {
+            "fileName": "meilleur-ami.png",
+            "description": "Meilleur ami"
+        }
+    },
+    {
+        "id": 33,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Alcool de riz",
+        "fileName": "alcool-de-riz",
+        "time": 154,
+        "logo": {
+            "fileName": "alcool-de-riz.png",
+            "description": "Alcool de riz"
+        }
+    },
+    {
+        "id": 34,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Tours opérateurs",
+        "fileName": "tours-operateurs",
+        "time": 165,
+        "logo": {
+            "fileName": "tours-operateurs.png",
+            "description": "Tours opérateurs"
+        }
+    },
+    {
+        "id": 35,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Autochtone",
+        "fileName": "autochtone",
+        "time": 243,
+        "logo": {
+            "fileName": "autochtone.png",
+            "description": "Autochtone"
+        }
+    },
+    {
+        "id": 36,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Cheveux long",
+        "fileName": "cheveux-long",
+        "time": 269,
+        "logo": {
+            "fileName": "cheveux-long.png",
+            "description": "Cheveux long"
+        }
+    },
+    {
+        "id": 37,
+        "episodeId": 4,
+        "protagonistId": -1,
+        "title": "DBZ",
+        "fileName": "dbz",
+        "time": 340,
+        "logo": {
+            "fileName": "dbz.png",
+            "description": "DBZ"
+        }
+    },
+    {
+        "id": 38,
+        "episodeId": 4,
+        "protagonistId": -1,
+        "title": "Tartare",
+        "fileName": "tartare",
+        "time": 481,
+        "logo": {
+            "fileName": "tartare.png",
+            "description": "Tartare"
+        }
+    },
+    {
+        "id": 39,
+        "episodeId": 4,
+        "protagonistId": 2,
+        "title": "Tu meurs",
+        "fileName": "tu-meurs",
+        "time": 500,
+        "logo": {
+            "fileName": "tu-meurs.png",
+            "description": "Tu meurs"
+        }
+    },
+    {
+        "id": 40,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 41,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 42,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 43,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 44,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 45,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 46,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 47,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 48,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 49,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 50,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 51,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
+    },
+    {
+        "id": 52,
+        "episodeId": 3,
+        "protagonistId": -1,
+        "title": "",
+        "fileName": "",
+        "time": 67,
+        "logo": {
+            "fileName": ".png",
+            "description": ""
+        }
     }
 ]
