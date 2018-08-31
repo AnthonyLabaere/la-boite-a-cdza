@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { TranslateService } from '@ngx-translate/core';
 import { Events, Platform } from 'ionic-angular';
 import { AboutPage } from '../pages/about/about';
@@ -21,12 +22,14 @@ export class LaBoiteACDZAApp {
   protagonistsTab: any = ProtagonistsPage;
   aboutTab: any = AboutPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, translate: TranslateService, private events: Events) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private screenOrientation: ScreenOrientation, translate: TranslateService, private events: Events) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
 
       // this language will be used as a fallback when a translation isn't found in the current language
       translate.setDefaultLang('fr');
