@@ -994,5 +994,101 @@
             "fileName": "mourir.png",
             "description": "Mourir"
         }
+    },
+    {
+        "id": 94,
+        "episodeId": 12,
+        "protagonistId": 4,
+        "title": "Métrosexuel",
+        "fileName": "metrosexuel",
+        "time": 160,
+        "logo": {
+            "fileName": "metrosexuel.png",
+            "description": "Métrosexuel"
+        }
+    },
+    {
+        "id": 95,
+        "episodeId": 12,
+        "protagonistId": 4,
+        "title": "Albior",
+        "fileName": "albior",
+        "time": 238,
+        "logo": {
+            "fileName": "albior.png",
+            "description": "Albior"
+        }
+    },
+    {
+        "id": 96,
+        "episodeId": 12,
+        "protagonistId": 4,
+        "title": "Anniversaire",
+        "fileName": "anniversaire",
+        "time": 270,
+        "logo": {
+            "fileName": "anniversaire.png",
+            "description": "Anniversaire"
+        }
+    },
+    {
+        "id": 97,
+        "episodeId": 12,
+        "protagonistId": 4,
+        "title": "Socialisme",
+        "fileName": "socialisme",
+        "time": 291,
+        "logo": {
+            "fileName": "socialisme.png",
+            "description": "Socialisme"
+        }
+    },
+    {
+        "id": 98,
+        "episodeId": 12,
+        "protagonistId": -1,
+        "title": "Lancer des fleurs",
+        "fileName": "lancer-des-fleurs",
+        "time": 412,
+        "logo": {
+            "fileName": "lancer-des-fleurs.png",
+            "description": "Lancer des fleurs"
+        }
+    },
+    {
+        "id": 99,
+        "episodeId": 12,
+        "protagonistId": 4,
+        "title": "Excuses",
+        "fileName": "excuses",
+        "time": 595,
+        "logo": {
+            "fileName": "excuses.png",
+            "description": "Excuses"
+        }
+    },
+    {
+        "id": 100,
+        "episodeId": 12,
+        "protagonistId": -1,
+        "title": "Fumé comme un saumon",
+        "fileName": "fume-saumon",
+        "time": 671,
+        "logo": {
+            "fileName": "fume-saumon.png",
+            "description": "Fumé comme un saumon"
+        }
+    },
+    {
+        "id": 101,
+        "episodeId": 12,
+        "protagonistId": 1,
+        "title": "Allongé",
+        "fileName": "allonge",
+        "time": 736,
+        "logo": {
+            "fileName": "allonge.png",
+            "description": "Allongé"
+        }
     }
 ]
