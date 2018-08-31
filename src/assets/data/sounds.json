@@ -506,7 +506,7 @@
     {
         "id": 44,
         "episodeId": 5,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "RTT",
         "fileName": "rtt",
         "time": 314,
@@ -537,6 +537,78 @@
         "logo": {
             "fileName": "tue-un-type.png",
             "description": "Tué un type"
+        }
+    },
+    {
+        "id": 47,
+        "episodeId": 6,
+        "protagonistId": 5,
+        "title": "Baba cool",
+        "fileName": "baba-cool",
+        "time": 142,
+        "logo": {
+            "fileName": "baba-cool.png",
+            "description": "Baba cool"
+        }
+    },
+    {
+        "id": 48,
+        "episodeId": 6,
+        "protagonistId": 5,
+        "title": "Tomb raider",
+        "fileName": "tomb-raider",
+        "time": 147,
+        "logo": {
+            "fileName": "tomb-raider.png",
+            "description": "Tomb raider"
+        }
+    },
+    {
+        "id": 49,
+        "episodeId": 6,
+        "protagonistId": 5,
+        "title": "Coiffeur",
+        "fileName": "coiffeur",
+        "time": 281,
+        "logo": {
+            "fileName": "coiffeur.png",
+            "description": "Coiffeur"
+        }
+    },
+    {
+        "id": 50,
+        "episodeId": 6,
+        "protagonistId": -1,
+        "title": "École des champions",
+        "fileName": "ecole-des-champions",
+        "time": 303,
+        "logo": {
+            "fileName": "ecole-des-champions.png",
+            "description": "École des champions"
+        }
+    },
+    {
+        "id": 51,
+        "episodeId": 6,
+        "protagonistId": 5,
+        "title": "Patchouli",
+        "fileName": "patchouli",
+        "time": 370,
+        "logo": {
+            "fileName": "patchouli.png",
+            "description": "Patchouli"
+        }
+    },
+    {
+        "id": 52,
+        "episodeId": 6,
+        "protagonistId": 1,
+        "title": "Hippie",
+        "fileName": "hippie",
+        "time": 67,
+        "logo": {
+            "fileName": "hippie.png",
+            "description": "Hippie"
         }
     }
 ]
