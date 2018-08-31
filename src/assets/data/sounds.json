@@ -670,5 +670,89 @@
             "fileName": "poux.png",
             "description": "Poux"
         }
+    },
+    {
+        "id": 58,
+        "episodeId": 8,
+        "protagonistId": 3,
+        "title": "En toute amitié",
+        "fileName": "en-toute-amitie",
+        "time": 86,
+        "logo": {
+            "fileName": "en-toute-amitie.png",
+            "description": "En toute amitié"
+        }
+    },
+    {
+        "id": 59,
+        "episodeId": 8,
+        "protagonistId": 1,
+        "title": "Espoir et amitié",
+        "fileName": "espoir-et-amitie",
+        "time": 126,
+        "logo": {
+            "fileName": "espoir-et-amitie.png",
+            "description": "Espoir et amitié"
+        }
+    },
+    {
+        "id": 60,
+        "episodeId": 8,
+        "protagonistId": 1,
+        "title": "Figurants",
+        "fileName": "figurants",
+        "time": 246,
+        "logo": {
+            "fileName": "figurants.png",
+            "description": "Figurants"
+        }
+    },
+    {
+        "id": 70,
+        "episodeId": 8,
+        "protagonistId": 2,
+        "title": "Roi des pirates",
+        "fileName": "roi-des-pirates",
+        "time": 281,
+        "logo": {
+            "fileName": "roi-des-pirates.png",
+            "description": "Roi des pirates"
+        }
+    },
+    {
+        "id": 71,
+        "episodeId": 8,
+        "protagonistId": 3,
+        "title": "Tétanos",
+        "fileName": "tetanos",
+        "time": 301,
+        "logo": {
+            "fileName": "tetanos.png",
+            "description": "Tétanos"
+        }
+    },
+    {
+        "id": 72,
+        "episodeId": 8,
+        "protagonistId": -1,
+        "title": "Batman",
+        "fileName": "batman",
+        "time": 445,
+        "logo": {
+            "fileName": "batman.png",
+            "description": "Batman"
+        }
+    },
+    {
+        "id": 73,
+        "episodeId": 8,
+        "protagonistId": -1,
+        "title": "Acupuncture",
+        "fileName": "acupuncture",
+        "time": 514,
+        "logo": {
+            "fileName": "acupuncture.png",
+            "description": "Acupuncture"
+        }
     }
 ]
