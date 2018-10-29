@@ -2,7 +2,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -58,7 +57,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     NativeAudio,
     ScreenOrientation,
-    InAppBrowser,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

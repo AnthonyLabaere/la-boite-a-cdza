@@ -21,7 +21,6 @@
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/core": "~4.12.0",
-    "@ionic-native/in-app-browser": "^4.12.0",
     "@ionic-native/native-audio": "^4.12.0",
     "@ionic-native/screen-orientation": "^4.12.0",
     "@ionic-native/splash-screen": "~4.12.0",
@@ -32,7 +31,6 @@
     "cordova-android": "7.1.1",
     "cordova-browser": "5.0.4",
     "cordova-plugin-device": "^2.0.2",
-    "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
     "cordova-plugin-ionic-webview": "^2.1.0",
     "cordova-plugin-nativeaudio": "^3.0.9",
@@ -60,7 +58,6 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-nativeaudio": {},
-      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-screen-orientation": {}
     },
     "platforms": [
