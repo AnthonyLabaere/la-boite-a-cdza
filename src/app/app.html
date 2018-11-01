@@ -1,6 +1,6 @@
 <ion-tabs (ionChange)="onTabsChange($event)">
-    <ion-tab tabTitle="{{'home.title' | translate}}" [root]="homeTab"></ion-tab>
-    <ion-tab tabTitle="{{'episodes.title' | translate}}" [root]="episodesTab"></ion-tab>
-    <ion-tab tabTitle="{{'protagonists.title' | translate}}" [root]="protagonistsTab"></ion-tab>
-    <ion-tab tabTitle="{{'about.title' | translate}}" [root]="aboutTab"></ion-tab>
+    <ion-tab tabTitle="{{'home.title' | translate | uppercase}}" [root]="homeTab"></ion-tab>
+    <ion-tab tabTitle="{{'episodes.title' | translate | uppercase}}" [root]="episodesTab"></ion-tab>
+    <ion-tab tabTitle="{{'protagonists.title' | translate | uppercase}}" [root]="protagonistsTab"></ion-tab>
+    <ion-tab tabTitle="{{'about.title' | translate | uppercase}}" [root]="aboutTab"></ion-tab>
 </ion-tabs>`
