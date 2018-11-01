@@ -53,6 +53,7 @@ export class SoundService {
         this.playingSoundDonePlayingCallBack = donePlayingCallback;
 
         // Lancement de l'enregistrement
+        console.log(SoundService.AUDIO_FILES_PATH + sound.episodeId + '/' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION);
         this.nativeAudio.preloadSimple(sound.fileName, SoundService.AUDIO_FILES_PATH + sound.episodeId + '/' + sound.fileName + SoundService.AUDIO_FILE_EXTENSION)
             .then(
                 () => {

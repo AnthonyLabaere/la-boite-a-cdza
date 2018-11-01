@@ -698,7 +698,7 @@
     {
         "id": 60,
         "episodeId": 8,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Figurants",
         "fileName": "figurants",
         "time": 246,
@@ -770,7 +770,7 @@
     {
         "id": 75,
         "episodeId": 9,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Perdu l'esprit",
         "fileName": "perdu-l-esprit",
         "time": 125,
@@ -782,7 +782,7 @@
     {
         "id": 76,
         "episodeId": 9,
-        "protagonistId": 3,
+        "protagonistId": 2,
         "title": "Doigt",
         "fileName": "doigt",
         "time": 251,
@@ -1082,7 +1082,7 @@
     {
         "id": 101,
         "episodeId": 12,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Allongé",
         "fileName": "allonge",
         "time": 736,
@@ -1130,7 +1130,7 @@
     {
         "id": 105,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Yop la boum",
         "fileName": "yop-la-boum",
         "time": 660,
@@ -1154,7 +1154,7 @@
     {
         "id": 106,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Champomy",
         "fileName": "champomy",
         "time": 1082,
@@ -1166,7 +1166,7 @@
     {
         "id": 107,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Candle in the wind",
         "fileName": "candle-in-the-wind",
         "time": 1093,
@@ -1178,7 +1178,7 @@
     {
         "id": 108,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Ça défoule",
         "fileName": "ca-defoule",
         "time": 1149,
@@ -1190,7 +1190,7 @@
     {
         "id": 109,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Chaussures",
         "fileName": "chaussures",
         "time": 1259,
@@ -1202,7 +1202,7 @@
     {
         "id": 110,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Jafar",
         "fileName": "jafar",
         "time": 1372,
@@ -1214,7 +1214,7 @@
     {
         "id": 111,
         "episodeId": 13,
-        "protagonistId": 1,
+        "protagonistId": -1,
         "title": "Bonnet",
         "fileName": "bonnet",
         "time": 1744,

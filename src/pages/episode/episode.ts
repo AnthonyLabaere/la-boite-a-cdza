@@ -38,6 +38,7 @@ export class EpisodePage {
       this.episodeService.getEpisode(this.navParams.get(EpisodePage.EPISODE_ID_PARAM_KEY))
         .then((episode: Episode) => {
           this.episode = episode;
+          console.log(episode);
         });
 
         this.events.subscribe(LaBoiteACDZAApp.ON_TABS_CHANGE, (id: string) => {

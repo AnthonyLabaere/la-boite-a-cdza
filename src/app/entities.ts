@@ -83,7 +83,7 @@ export class ProtagonistSumUp {
 
 export class Sound {
     id: number;
-    episodeId: number; // PArt of the logo' file path
+    episodeId: number; // Part of the logo' file path
     title: string;
     fileName: string;
     logo: Image;

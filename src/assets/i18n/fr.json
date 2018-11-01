@@ -1,5 +1,8 @@
 {
     "title": "La boîte à CDZA",
+    "home": {
+        "title": "Accueil"
+    },
     "episodes": {
         "title": "Épisodes"
     },

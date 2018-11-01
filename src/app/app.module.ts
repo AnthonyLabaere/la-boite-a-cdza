@@ -12,6 +12,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AboutPage } from '../pages/about/about';
 import { EpisodePage } from '../pages/episode/episode';
 import { EpisodesPage } from '../pages/episodes/episodes';
+import { HomePage } from '../pages/home/home';
 import { ProtagonistPage } from '../pages/protagonist/protagonist';
 import { ProtagonistsPage } from '../pages/protagonists/protagonists';
 import { LaBoiteACDZAApp } from './app.component';
@@ -26,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     LaBoiteACDZAApp,
+    HomePage,
     EpisodesPage,
     EpisodePage,
     AboutPage,
@@ -48,6 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     LaBoiteACDZAApp,
+    HomePage,
     EpisodesPage,
     EpisodePage,
     AboutPage,
