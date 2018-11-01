@@ -1,11 +1,10 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, NgZone } from '@angular/core';
-import { Events, IonicPage } from 'ionic-angular';
+import { Events } from 'ionic-angular';
 import { LaBoiteACDZAApp } from '../../app/app.component';
 import { Sound } from '../../app/entities';
 import { SoundService } from '../../app/_services/sound.service';
 
-@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
