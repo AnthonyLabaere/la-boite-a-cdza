@@ -4,8 +4,10 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <div class="seya-container">
-      <img src="assets/imgs/protagonists/seya.png" alt="Seya" (click)="onSeyaClick()" />
-  </div>
+<ion-content class="home-content">
+  <ion-row class="seya-container">
+    <ion-col (click)="onSeyaClick(seyaSound)">
+        <img src="assets/imgs/protagonists/seya.png" alt="Seya" />
+    </ion-col>
+  </ion-row>
 </ion-content>

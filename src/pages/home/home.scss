@@ -6,5 +6,35 @@ page-home {
             display: flex;
             margin: auto;
         }
+
+        ion-row {
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        ion-col {
+            text-align: center;
+            padding: 15px 10px;
+    
+            img {
+                border: 5px solid black;
+            }
+    
+            ion-icon {
+                position: absolute;
+                top: 28%;
+                font-size: 100px;
+                font-weight: bold;
+                color: black;
+    
+                &[name="musical-note"] {
+                    left: 44%;
+                }
+            }
+    
+            div {
+                color: black;
+            }
+        }
     }
 }

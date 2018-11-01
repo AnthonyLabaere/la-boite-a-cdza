@@ -14,7 +14,7 @@ import { SoundService } from '../../app/_services/sound.service';
         transform: 'scale(1)'
       })),
       state('active',   style({
-        transform: 'scale(1.1)'
+        transform: 'scale(1.05)'
       })),
       transition('inactive => active', animate('100ms ease-in')),
       transition('active => inactive', animate('100ms ease-out'))
@@ -24,6 +24,8 @@ import { SoundService } from '../../app/_services/sound.service';
 export class HomePage {
 
   private seyaSound: Sound;
+
+  public playingSound: Sound;
 
   constructor(private zone: NgZone, private events: Events, private soundService: SoundService) {
     this.seyaSound = new Sound(null, 0, null, 'plait-il', null);
@@ -36,20 +38,31 @@ export class HomePage {
   }
 
   private stopPlayingSound() {
-    this.seyaSound.state = 'inactive';
-    this.soundService.stopSound(this.seyaSound);
+    if (this.playingSound) {
+      this.seyaSound.state = 'inactive';
+      this.soundService.stopSound(this.playingSound);
+      this.playingSound = undefined;
+    }
   }
 
-  public onSeyaClick() {
-    if (this.seyaSound.state === 'active') {
-      this.seyaSound.state = 'inactive';
-      this.soundService.stopSound(this.seyaSound);
-    } else {
-      this.seyaSound.state = 'active';
+  public onSeyaClick(sound: Sound) {
+    if (sound.state === 'active') {
+      this.playingSound = undefined;
 
-      this.soundService.playSound(this.seyaSound, () => {
+      sound.state = 'inactive';
+      this.soundService.stopSound(sound);
+    } else {
+      this.playingSound = sound;
+
+      sound.state = 'active';
+
+      this.soundService.playSound(sound, () => {
         this.zone.run(() => {
-          this.seyaSound.state = 'inactive';
+          if (this.playingSound) {
+            this.playingSound = undefined;
+          }
+
+          sound.state = 'inactive';
         });
       });
     }
